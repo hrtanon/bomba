@@ -3,7 +3,7 @@ import os
 
 
 os.system("cls")
-
+random.seed()
 
 def zaklad():
     print(
@@ -14,8 +14,7 @@ def zaklad():
     if potvrzeni == "":
         a = nahodnecislo()
         obt = obtiznost()
-        b = inpud()
-        pocitadlo(a, b, obt)
+        telo_hry(a,obt)
 
     else:
         print(f"skoda tak nekdy priste")
@@ -26,29 +25,19 @@ def nahodnecislo():
 
     return a
 
+def cislo():
 
-def inpud():
     for i in range(2):
         try:
             b = int(input(f"nahodne cislo mam ted zadej tvuj typ"))
+            break
         except ValueError:
             print(
-                f"pravidla byli zadat platne cislo \n ale ze si to ty tak ti dam jeste jednu sanci"
-            )
+                    f"pravidla byli zadat platne cislo \n ale ze si to ty tak ti dam jeste jednu sanci"
+                )
             continue
     return b
 
-
-def pocitadlo(a, b):
-    list = []
-    c = len(list)
-    if a == b:
-        print(f"jsi bocer vyhravas \n gratului")
-        print(f"pocet pokusu {c}")
-
-    elif a < b:
-        print(f"cislo je mensi nez{b}")
-        list.append(1)
 
 
 def obtiznost():
@@ -76,3 +65,28 @@ def obtiznost():
             obt = 15
             return obt
         break
+
+
+def telo_hry(obt,a):
+    
+
+    for i in range(obt):
+        b=cislo()
+        if a == b:
+            print(f"jsi bocer vyhravas \n gratului")
+            print(f"pocet pokusu {i+1}")
+            print(a)
+            return
+
+        elif a < b:
+            print(f"cislo je mensi nez{b}")
+            continue
+        elif a > b:
+            print(f"cislo je vetsi nez{b}")
+            continue
+    print(f"bejy priste")
+    return 
+
+
+
+zaklad()
