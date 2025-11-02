@@ -90,3 +90,8 @@ def telo_hry(obt,a):
 
 
 zaklad()
+
+
+# čela funce nema osetreny spravne vsup nevidel jsem cislo vetsi nez 20 vylosovano a kdyz zadam cislo jednociferne nespousti
+# se ta if podminka a nepise mi nic nefunguje loop nekdy se sam neukonci dokud nevyhraji
+
