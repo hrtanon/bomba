@@ -21,6 +21,7 @@ def zaklad():
 
 
 def nahodnecislo():
+    random.seed()
     a = random.randint(0, 100)
 
     return a
@@ -67,7 +68,7 @@ def obtiznost():
         break
 
 
-def telo_hry(obt,a):
+def telo_hry(a,obt):
     
 
     for i in range(obt):
@@ -84,12 +85,14 @@ def telo_hry(obt,a):
         elif a > b:
             print(f"cislo je vetsi nez{b}")
             continue
-    print(f"bejy priste")
+    print(f"treba priste")
     return 
 
 
+for i in range(10):
+    zaklad()
 
-zaklad()
+
 
 
 # čela funce nema osetreny spravne vsup nevidel jsem cislo vetsi nez 20 vylosovano a kdyz zadam cislo jednociferne nespousti
